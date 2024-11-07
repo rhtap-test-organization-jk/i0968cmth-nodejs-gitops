@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: i0968cmth-nodejs-gitops
+  description: This is GitOps manifest for i0968cmth-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: i0968cmth-nodejs
+    backstage.io/kubernetes-id: i0968cmth-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: i0968cmth-nodejs-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:i0968cmth-nodejs
